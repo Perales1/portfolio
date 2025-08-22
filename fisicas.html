@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ilustradores Físicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos2.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <header>
+        <div class="logo">Adri</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="submenu-parent">
+                    <a href="digital.html">Ilustradores Digitales</a>
+                    <ul class="submenu">
+                        <li><a href="digital.html#concept-art">Concept Art</a></li>
+                        <li><a href="digital.html#comic">Cómic</a></li>
+                        <li><a href="digital.html#modelado3d">Modelado 3D</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-parent">
+                    <a href="fisicas.html">Ilustradores Físicos</a>
+                    <ul class="submenu">
+                        <li><a href="#oleo">Óleo</a></li>
+                        <li><a href="#acuarela">Acuarela</a></li>
+                        <li><a href="#grafito">Grafito</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="texto">
+            <h1>Ilustración Física</h1>
+            <p>Descubre mis trabajos en técnicas tradicionales: óleo, acuarela, grafito y más. Obras únicas que transmiten esencia artesanal y detalle manual.</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="galeria">
+        <h2 id="oleo">Óleo</h2>
+        <div class="grid-galeria">
+            <a href="#"><img src="oleo1.jpg" alt="Paisaje al óleo con pinceladas expresivas"></a>
+            <a href="#"><img src="oleo2.jpg" alt="Retrato clásico al óleo"></a>
+            <a href="#"><img src="oleo3.jpg" alt="Bodegón al óleo con frutas"></a>
+        </div>
+
+        <h2 id="acuarela">Acuarela</h2>
+        <div class="grid-galeria">
+            <a href="#"><img src="acuarela1.jpg" alt="Paisaje de montaña en acuarela"></a>
+            <a href="#"><img src="acuarela2.jpg" alt="Retrato suave en acuarela"></a>
+            <a href="#"><img src="acuarela3.jpg" alt="Flores coloridas en acuarela"></a>
+        </div>
+
+        <h2 id="grafito">Grafito</h2>
+        <div class="grid-galeria">
+            <a href="#"><img src="grafito1.jpg" alt="Retrato realista en grafito"></a>
+            <a href="#"><img src="grafito2.jpg" alt="Boceto arquitectónico en grafito"></a>
+            <a href="#"><img src="grafito3.jpg" alt="Estudio anatómico en grafito"></a>
+        </div>
+    </section>
+
+    <!-- REDES -->
+    <section class="redes">
+        <h2>Conéctate conmigo</h2>
+        <div class="social">
+            <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn-social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="btn-social"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="firma">© 2025 - Diseñado por David Fernández Espejo</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="img-grande">
+        <div id="descripcion"></div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const imgGrande = document.getElementById("img-grande");
+        const descripcion = document.getElementById("descripcion");
+        const cerrar = document.querySelector(".cerrar");
+        const imagenes = document.querySelectorAll(".grid-galeria a img");
+
+        imagenes.forEach(img => {
+            img.addEventListener("click", e => {
+                e.preventDefault();
+                modal.style.display = "flex";
+                imgGrande.src = img.src;
+                descripcion.innerText = img.alt;
+            });
+        });
+
+        cerrar.onclick = () => modal.style.display = "none";
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+
+</body>
+</html>
