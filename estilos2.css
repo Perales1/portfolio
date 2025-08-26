@@ -154,13 +154,13 @@ nav ul.menu a:hover {
     margin-bottom: 1.5rem; /* espacio entre imágenes vertical */
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .grid-galeria a:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .grid-galeria img {
@@ -181,21 +181,6 @@ footer {
 footer .firma {
     font-size: .9rem;
     opacity: .9;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul.menu {
-        gap: 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .galeria {
-        padding: 2rem 1.5rem;
-    }
 }
 
 .redes {
@@ -253,8 +238,8 @@ footer .firma {
 }
 
 .modal-contenido {
-    max-width: 90%;    /* casi todo el ancho de pantalla */
-    max-height: 85%;   /* casi toda la altura de pantalla */
+    max-width: 90%; /* casi todo el ancho de pantalla */
+    max-height: 85%; /* casi toda la altura de pantalla */
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
     object-fit: contain; /* mantiene proporción original sin recortar */
@@ -281,4 +266,200 @@ footer .firma {
 
 .cerrar:hover {
     color: #ff4444;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .texto {
+    max-width: 100%;
+  }
+
+  .hero .foto img {
+    margin-top: 1.5rem;
+    max-width: 90%;
+  }
+
+  .carousel-frame {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul.menu {
+    display: none; /* se esconderá en móvil, se usa el sidebar */
+  }
+
+  #sidebar {
+    width: 260px;
+    transform: translateX(-260px);
+  }
+
+  .page-content.shifted {
+    transform: translateX(260px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn-principal {
+    width: 100%;
+  }
+
+  .carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* HAMBURGER (solo móvil) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3000;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* MENÚ MÓVIL */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
+  text-align: center;
+}
+.mobile-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu nav ul li {
+  margin: 20px 0;
+}
+.mobile-menu nav ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.mobile-menu nav ul li a:hover {
+  color: var(--blue-accent);
+}
+
+/* Botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul.menu { display: none; } /* ocultar menú de escritorio */
+  .hamburger { display: flex; } /* mostrar hamburguesa */
+}
+/* Botón hamburguesa (solo en móvil) */
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--blue-accent);
+}
+
+/* Menú móvil lateral */
+.menu-movil {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 15px rgba(0,0,0,.2);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: right .4s ease;
+    z-index: 2000;
+}
+
+.menu-movil.open {
+    right: 0;
+}
+
+.menu-movil ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+.menu-movil li {
+    margin-bottom: 1rem;
+}
+
+.menu-movil a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--blue-accent-dark);
+    font-weight: 600;
+    transition: color .3s;
+}
+
+.menu-movil a:hover {
+    color: var(--blue-accent);
+}
+
+/* Botón cerrar dentro del menú */
+.cerrar-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    cursor: pointer;
+    color: var(--blue-accent);
+}
+
+/* Responsive: mostrar solo en móvil */
+@media (max-width: 768px) {
+    .btn-menu {
+        display: block;
+    }
+    nav ul.menu {
+        display: none; /* ocultamos el menú grande */
+    }
 }

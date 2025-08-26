@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
+<!-- Botón hamburguesa solo visible en móvil -->
+<div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Menú móvil -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <nav>
+        <ul>
+            <li><a href="digital.html">Ilustraciones Digitales</a></li>
+            <li><a href="fisicas.html">Ilustraciones Físicas</a></li>
+            <li><a href="trabajo.html">Trabajo Fin de Grado</a></li>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
+</div>
 <!-- MODAL -->
 <div id="modal" class="modal">
     <span class="cerrar">&times;</span>
@@ -61,7 +80,8 @@
 <section class="hero">
     <div class="texto">
         <h1>Trabajo Fin de Grado</h1>
-        <p>Explora mi trabajo final de grado con el proceso creativo, ilustraciones y el desarrollo del traje completo. Cada sección refleja creatividad, técnica y dedicación.</p>
+        <p>Explora mi trabajo final de grado con el proceso creativo, ilustraciones y el desarrollo del traje completo.
+            Cada sección refleja creatividad, técnica y dedicación.</p>
     </div>
 </section>
 
@@ -125,7 +145,8 @@
     <h2>Conéctate conmigo</h2>
     <div class="social">
         <a href="https://www.instagram.com/caroolina.aguileraa" class="btn-social"><i class="fab fa-instagram"></i></a>
-        <a href="https://es.linkedin.com/in/carolina-lópez-aguilera-837572374" class="btn-social"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://es.linkedin.com/in/carolina-lópez-aguilera-837572374" class="btn-social"><i
+                class="fab fa-linkedin-in"></i></a>
         <a href="https://www.tiktok.com/@caroolina.aguileraa" class="btn-social"><i class="fab fa-tiktok"></i></a>
     </div>
 </section>
@@ -157,6 +178,24 @@
     modal.onclick = e => {
         if (e.target === modal) modal.style.display = "none";
     };
+    const hamburgerBtn = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.style.display = 'flex';
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+    });
+
+    // También cerrar al clicar un enlace
+    document.querySelectorAll('.mobile-menu nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+    });
 </script>
 </body>
 </html>

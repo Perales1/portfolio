@@ -503,3 +503,76 @@ footer .firma {
   nav ul.menu { display: none; } /* ocultar menú de escritorio */
   .hamburger { display: flex; } /* mostrar hamburguesa */
 }
+/* Botón hamburguesa (solo en móvil) */
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--blue-accent);
+}
+
+/* Menú móvil lateral */
+.menu-movil {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 15px rgba(0,0,0,.2);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: right .4s ease;
+    z-index: 2000;
+}
+
+.menu-movil.open {
+    right: 0;
+}
+
+.menu-movil ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+.menu-movil li {
+    margin-bottom: 1rem;
+}
+
+.menu-movil a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--blue-accent-dark);
+    font-weight: 600;
+    transition: color .3s;
+}
+
+.menu-movil a:hover {
+    color: var(--blue-accent);
+}
+
+/* Botón cerrar dentro del menú */
+.cerrar-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    cursor: pointer;
+    color: var(--blue-accent);
+}
+
+/* Responsive: mostrar solo en móvil */
+@media (max-width: 768px) {
+    .btn-menu {
+        display: block;
+    }
+    nav ul.menu {
+        display: none; /* ocultamos el menú grande */
+    }
+}
