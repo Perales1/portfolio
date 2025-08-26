@@ -3,114 +3,168 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ilustradores Físicos</title>
+    <title>Ilustraciones Físicas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos2.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="img-grande">
+    <div id="descripcion"></div>
+</div>
 
-    <!-- MENÚ SUPERIOR -->
-    <header>
-        <div class="logo">Adri</div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li class="submenu-parent">
-                    <a href="digital.html">Ilustradores Digitales</a>
-                    <ul class="submenu">
-                        <li><a href="digital.html#concept-art">Concept Art</a></li>
-                        <li><a href="digital.html#comic">Cómic</a></li>
-                        <li><a href="digital.html#modelado3d">Modelado 3D</a></li>
-                    </ul>
-                </li>
-                <li class="submenu-parent">
-                    <a href="fisicas.html">Ilustradores Físicos</a>
-                    <ul class="submenu">
-                        <li><a href="#oleo">Óleo</a></li>
-                        <li><a href="#acuarela">Acuarela</a></li>
-                        <li><a href="#grafito">Grafito</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header>
+    <div class="logo">Carolina</div>
+    <nav>
+        <ul class="menu">
+            <li class="submenu-parent">
+                <a href="index.html">Inicio</a>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="texto">
-            <h1>Ilustración Física</h1>
-            <p>Descubre mis trabajos en técnicas tradicionales: óleo, acuarela, grafito y más. Obras únicas que transmiten esencia artesanal y detalle manual.</p>
-        </div>
-    </section>
+            </li>
+            <li class="submenu-parent">
+                <a href="digital.html">Ilustraciones Digitales</a>
+                <ul class="submenu">
+                    <li><a href="digital.html#discos">Diseño de packaging de CD</a></li>
+                    <li><a href="digital.html#boceto">Boceteo de Personajes</a></li>
+                    <li><a href="digital.html#personajes">Diseño de Personajes</a></li>
+                    <li><a href="digital.html#carteles">Carteles Promocionales</a></li>
+                    <li><a href="digital.html#paisajes">Paisajes</a></li>
+                    <li><a href="digital.html#logos">Logo Design</a></li>
+                </ul>
+            </li>
+            <li class="submenu-parent">
+                <a href="fisicas.html">Ilustraciones Físicos</a>
+                <ul class="submenu">
+                    <li><a href="fisicas.html#moda">Diseño de Moda</a></li>
+                    <li><a href="fisicas.html#universidad">Proyecto Universidad de Jaén</a></li>
+                    <li><a href="fisicas.html#collage">Collage</a></li>
+                    <li><a href="fisicas.html#pintura">Pintura</a></li>
+                    <li><a href="fisicas.html#varias">Ilustraciones Varias</a></li>
+                </ul>
+            </li>
+            <li class="submenu-parent">
+                <a href="trabajo.html">Trabajo Fin de Grado</a>
+                <ul class="submenu">
+                    <li><a href="trabajo.html#proceso">Proceso Creativo</a></li>
+                    <li><a href="trabajo.html#ilustraciones">Ilustraciones</a></li>
+                    <li><a href="trabajo.html#traje">Traje Completo</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- GALERÍA -->
-    <section class="galeria">
-        <h2 id="oleo">Óleo</h2>
-        <div class="grid-galeria">
-            <a href="#"><img src="oleo1.jpg" alt="Paisaje al óleo con pinceladas expresivas"></a>
-            <a href="#"><img src="oleo2.jpg" alt="Retrato clásico al óleo"></a>
-            <a href="#"><img src="oleo3.jpg" alt="Bodegón al óleo con frutas"></a>
-        </div>
-
-        <h2 id="acuarela">Acuarela</h2>
-        <div class="grid-galeria">
-            <a href="#"><img src="acuarela1.jpg" alt="Paisaje de montaña en acuarela"></a>
-            <a href="#"><img src="acuarela2.jpg" alt="Retrato suave en acuarela"></a>
-            <a href="#"><img src="acuarela3.jpg" alt="Flores coloridas en acuarela"></a>
-        </div>
-
-        <h2 id="grafito">Grafito</h2>
-        <div class="grid-galeria">
-            <a href="#"><img src="grafito1.jpg" alt="Retrato realista en grafito"></a>
-            <a href="#"><img src="grafito2.jpg" alt="Boceto arquitectónico en grafito"></a>
-            <a href="#"><img src="grafito3.jpg" alt="Estudio anatómico en grafito"></a>
-        </div>
-    </section>
-
-    <!-- REDES -->
-    <section class="redes">
-        <h2>Conéctate conmigo</h2>
-        <div class="social">
-           <a href="#" class="btn-social"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="btn-social"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="btn-social"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p class="firma">© 2025 - Diseñado por David Fernández Espejo</p>
-    </footer>
-
-    <!-- MODAL -->
-    <div id="modal" class="modal">
-        <span class="cerrar">&times;</span>
-        <img class="modal-contenido" id="img-grande">
-        <div id="descripcion"></div>
+<!-- HERO -->
+<section class="hero">
+    <div class="texto">
+        <h1>Ilustraciones Físicas</h1>
+        <p>Explora mis trabajos físicos en diseño de moda, pintura, collage, proyectos universitarios y varias
+            ilustraciones. Cada pieza refleja creatividad y técnica tradicional.</p>
     </div>
+</section>
 
-    <script>
-        const modal = document.getElementById("modal");
-        const imgGrande = document.getElementById("img-grande");
-        const descripcion = document.getElementById("descripcion");
-        const cerrar = document.querySelector(".cerrar");
-        const imagenes = document.querySelectorAll(".grid-galeria a img");
+<!-- MODA -->
+<section class="galeria" id="moda">
+    <h2>Diseño de Moda</h2>
+    <div class="grid-galeria">
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda1.jpg" alt="Moda 1"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda2.jpg" alt="Moda 2"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda3.jpg" alt="Moda 3"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda4.jpg" alt="Moda 4"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda5.jpg" alt="Moda 5"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda6.jpg" alt="Moda 6"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda7.png" alt="Moda 7"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda8.jpg" alt="Moda 8"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda9.jpg" alt="Moda 9"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/moda10.jpg" alt="Moda 10"></a>
+    </div>
+</section>
 
-        imagenes.forEach(img => {
-            img.addEventListener("click", e => {
-                e.preventDefault();
-                modal.style.display = "flex";
-                imgGrande.src = img.src;
-                descripcion.innerText = img.alt;
-            });
+<!-- UNIVERSIDAD -->
+<section class="galeria" id="universidad">
+    <h2>Proyecto Universidad de Jaén</h2>
+    <div class="grid-galeria">
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/uja1.JPG" alt="UJA 1"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/uja2.JPG" alt="UJA 2"></a>
+    </div>
+</section>
+
+<!-- COLLAGE -->
+<section class="galeria" id="collage">
+    <h2>Collage</h2>
+    <div class="grid-galeria">
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/collage.jpg" alt="Collage 1"></a>
+    </div>
+</section>
+
+<!-- PINTURA -->
+<section class="galeria" id="pintura">
+    <h2>Pintura</h2>
+    <div class="grid-galeria">
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/pintura1.jpg" alt="Pintura 1"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/pintura2.jpg" alt="Pintura 2"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/pintura3.jpg" alt="Pintura 3"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/pintura4.jpg" alt="Pintura 4"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/pintura5.jpg" alt="Pintura 5"></a>
+    </div>
+</section>
+
+<!-- VARIAS -->
+<section class="galeria" id="varias">
+    <h2>Ilustraciones Varias</h2>
+    <div class="grid-galeria">
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias1.png" alt="Varias 1"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias2.png" alt="Varias 2"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias3.png" alt="Varias 3"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias4.png" alt="Varias 4"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias5.png" alt="Varias 5"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias6.jpg" alt="Varias 6"></a>
+        <a href="#"><img src="Ilustraciones/Ilustraciones%20manuales/varias7.jpg" alt="Varias 7"></a>
+    </div>
+</section>
+
+<!-- REDES -->
+<section class="redes">
+    <h2>Conéctate conmigo</h2>
+    <div class="social">
+        <a href="https://www.instagram.com/caroolina.aguileraa" class="btn-social"><i class="fab fa-instagram"></i></a>
+        <a href="https://es.linkedin.com/in/carolina-lópez-aguilera-837572374" class="btn-social"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.tiktok.com/@caroolina.aguileraa" class="btn-social"><i class="fab fa-tiktok"></i></a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p class="firma">© 2025 - Diseñado por David Fernández Espejo</p>
+</footer>
+
+<!-- SCRIPT MODAL -->
+<script>
+    const modal = document.getElementById("modal");
+    const imgGrande = document.getElementById("img-grande");
+    const descripcion = document.getElementById("descripcion");
+    const cerrar = document.querySelector(".cerrar");
+
+    const imagenes = document.querySelectorAll(".grid-galeria a img");
+
+    imagenes.forEach(img => {
+        img.addEventListener("click", e => {
+            e.preventDefault();
+            modal.style.display = "flex";
+            imgGrande.src = img.src;
+            descripcion.innerText = img.alt;
         });
+    });
 
-        cerrar.onclick = () => modal.style.display = "none";
-        modal.onclick = (e) => {
-            if (e.target === modal) modal.style.display = "none";
-        };
-    </script>
-
+    cerrar.onclick = () => modal.style.display = "none";
+    modal.onclick = e => {
+        if (e.target === modal) modal.style.display = "none";
+    };
+</script>
 </body>
 </html>
